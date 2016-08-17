@@ -1,4 +1,10 @@
 <h2>Welcome to the Blog</h2>
 
+<ul>
+  {{#each model as |blog|}}
+    {{blog-tile blog=blog}}
+  {{/each}}
+</ul>
+
 {{#link-to 'about'}}about{{/link-to}}
 {{#link-to 'contact'}}contact{{/link-to}}
