@@ -1,6 +1,7 @@
 
   <p>{{blog.author}}</p>
-  <p><img src={{blog.image}} alt={{blog.title}}></p>
+  <p>{{#link-to 'blog' blog.id}}<img src={{blog.image}} alt={{blog.title}}>{{/link-to}}</p>
+
   <!-- <li>{{blog.title}}</li>
   <li>{{blog.text}}</li>
 
