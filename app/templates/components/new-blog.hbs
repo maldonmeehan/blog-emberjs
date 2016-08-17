@@ -1,0 +1,35 @@
+<div>
+  <form>
+    <div class="form-group">
+      <label for="author">Author:</label>
+      {{input value=author id="author"}}
+    </div>
+
+    <div class="form-group">
+      <label for="title">Article title:</label>
+      {{input value=title id="title"}}
+    </div>
+
+    <div class="form-group">
+      <label for="time">Enter date:</label>
+      {{input value=time id="time"}}
+    </div>
+
+    <div class="form-group">
+      <label for="text">Story:</label>
+      {{input value=text id="text"}}
+    </div>
+
+    <div class="form-group">
+      <label for="category">Category:</label>
+      {{input value=category id="category"}}
+    </div>
+
+    <div class="form-group">
+      <label for="img">Image link:</label>
+      {{input value=img id="img"}}
+    </div>
+
+    <button {{action 'save1'}}>Save</button>
+  </form>
+</div>
