@@ -3,5 +3,6 @@
 {{#each blog.comments as |comment|}}
   {{comment.name}}:   {{comment.text}}
   <button {{action 'destroyComment' comment}}>Delete</button>
+  {{update-comment comment=comment updateComment="updateComment"}}
   <hr>
 {{/each}}

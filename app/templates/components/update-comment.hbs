@@ -1,0 +1,14 @@
+{{#if commentUpdate}}
+  <div>
+    <form>
+      <h4>should be here: {{comment.text}}</h4>
+      <div class="form-group">
+        <label for="text">Comment:</label>
+        {{input value=text id="text" placeholder=text}}
+      </div>
+      <button {{action 'submitComment' comment }}>submit</button>
+    </form>
+  </div>
+{{else}}
+<button {{action 'updateComment'}}>Update Comment</button>
+{{/if}}
