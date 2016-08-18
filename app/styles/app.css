@@ -1,7 +1,15 @@
+body {
+
+}
+
 img {
   width:540px;
   height:540px;
 }
 footer  {
   position: fixed;
+}
+
+.btn {
+  margin-top: 10px;
 }

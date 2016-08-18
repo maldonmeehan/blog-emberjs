@@ -11,10 +11,10 @@
         <label for="name">Name:</label>
         {{input value=name id="name"}}
       </div>
-       
-      <button {{action 'submitComment'}}>submit</button>
+
+      <button {{action 'submitComment'}} class="btn btn-info">submit</button>
     </form>
   </div>
 {{else}}
-  <button {{action 'addComment'}}>add comment</button>
+  <button {{action 'addComment'}} class="btn btn-info">add comment</button>
 {{/if}}

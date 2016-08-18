@@ -2,7 +2,7 @@
 <hr>
 {{#each blog.comments as |comment|}}
   {{comment.name}}:   {{comment.text}}
-  <button {{action 'destroyComment' comment}}>Delete</button>
+  <button {{action 'destroyComment' comment}} class="btn btn-info">Delete</button>
   {{update-comment comment=comment updateComment="updateComment"}}
   <hr>
 {{/each}}
