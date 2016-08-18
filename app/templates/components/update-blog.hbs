@@ -1,0 +1,39 @@
+{{#if updateBlogForm}}
+<div>
+  <form>
+    <div class="form-group">
+      <label for="author">Author:</label>
+      {{input value=author id="author" placeholder=blog.author}}
+    </div>
+
+    <div class="form-group">
+      <label for="title">Article title:</label>
+      {{input value=title id="title" placeholder=blog.title}}
+    </div>
+
+    <div class="form-group">
+      <label for="time">Enter date:</label>
+      {{input value=time id="time" placeholder=blog.time}}
+    </div>
+
+    <div class="form-group">
+      <label for="text">Story:</label>
+      {{input value=text id="text" placeholder=blog.text}}
+    </div>
+
+    <div class="form-group">
+      <label for="category">Category:</label>
+      {{input value=category id="category" placeholder=blog.category}}
+    </div>
+
+    <div class="form-group">
+      <label for="image">Image link:</label>
+      {{input value=image id="image" placeholder=blog.image}}
+    </div>
+
+    <button {{action 'update' blog}}>Save</button>
+  </form>
+</div>
+{{else}}
+  <button {{action 'updateBlogForm'}}>Update</button>
+{{/if}}
