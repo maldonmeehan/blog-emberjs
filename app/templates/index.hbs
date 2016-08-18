@@ -1,11 +1,5 @@
-<br><br><br>
-<h2>Welcome to the Blog</h2>
-
     {{#each model as |blog|}}
     <div class="col-sm-6">
       {{blog-tile blog=blog}}
     </div>
     {{/each}}
-
-{{#link-to 'about'}}about{{/link-to}}
-{{#link-to 'contact'}}contact{{/link-to}}

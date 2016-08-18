@@ -1,0 +1,20 @@
+
+{{#if blogAddComment}}
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="text">Comment:</label>
+        {{input value=text id="text"}}
+      </div>
+
+      <div class="form group">
+        <label for="name">Name:</label>
+        {{input value=name id="name"}}
+      </div>
+       
+      <button {{action 'submitComment'}}>submit</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'addComment'}}>add comment</button>
+{{/if}}

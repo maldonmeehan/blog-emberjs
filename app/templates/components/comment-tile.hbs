@@ -1,0 +1,7 @@
+<h2>Comments</h2>
+<hr>
+{{#each blog.comments as |comment|}}
+  {{comment.name}}:   {{comment.text}}
+  <button {{action 'destroyComment' comment}}>Delete</button>
+  <hr>
+{{/each}}

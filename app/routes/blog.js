@@ -12,11 +12,23 @@ export default Ember.Route.extend({
         }
       });
       blog.save();
-      this.transitionTo('index');
     },
     destroyBlog(blog) {
       blog.destroyRecord();
+      // comment.destroyRecord();
       this.transitionTo('index');
+    },
+    submitComment(params) {
+      var newComment = this.store.createRecord('comment', params);
+      var blog = params.blog;
+      blog.get('comments').addObject(newComment);
+      newComment.save().then(function() {
+        return blog.save();
+      });
+      this.transitionTo('blog', params.blog);
+    },
+    destroyComment(comment) {
+      comment.destroyRecord();
     }
   }
 });
